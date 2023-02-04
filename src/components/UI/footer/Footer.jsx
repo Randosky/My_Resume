@@ -1,13 +1,16 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import Burger from '../burger/Burger'
+import BurgerOpen from '../burger/BurgerOpen'
+import cl from "./MyFooter.module.css"
 
 const Footer = () => {
     return (
-        <footer className='footer'>
-            <Link to="/" className='link'><div className="footer__logo"></div></Link>
+        <footer className={cl.footer}>
+            <Link to="/" className={cl.link}><div className={cl.footer__logo}></div></Link>
             <Burger />
-            <Link to="/secret" className='link'><div className="footer__secret"></div></Link>
+            <BurgerOpen />
+            <Link to="/secret" className={cl.link}><div className={cl.footer__secret}></div></Link>
         </footer>
     )
 }
